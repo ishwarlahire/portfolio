@@ -2,16 +2,16 @@ export const personalInfo = {
   name: "Ishwar Lahire",
   title: "Python Full Stack Developer",
   tagline: "Building scalable backend systems with Python, FastAPI, Django & Node.js",
-  email: "ishwarlahire1@gmail.com",
+  email: "ishwarlahire2004@gmail.com",
   phone: "+91-9067935149",
   whatsapp: "919067935149",
-  whatsappMessage: "Hi Ishwar! 👋 I visited your portfolio and I'm interested in discussing a project with you. Can we connect?",
+  whatsappMessage: "Hi Ishwar!  I visited your portfolio and I'm interested in discussing a project with you. Can we connect?",
   location: "Manmad, Maharashtra, India",
   github: "https://github.com/ishwarlahire",
   linkedin: "https://linkedin.com/in/ishwar-lahire",
   summary: "Python Full Stack Developer with hands-on expertise in FastAPI, Django, Node.js, TypeScript, and Fastify. Specializing in building scalable REST APIs, authentication systems, and real-time applications. Proficient in PostgreSQL, MySQL, MongoDB, and Redis. Experienced in Docker-based deployment and delivering production-ready software solutions.",
   goal: "My goal is to become a Senior Full Stack Developer, mastering Python backend architecture and system design. I'm deepening expertise in microservices, distributed systems, and data engineering to build solutions that scale to millions of users.",
-  funFact: "I don't just write code — I build scalable backend systems 🚀",
+  funFact: "I don't just write code — I build scalable backend systems ",
   availableForFreelance: true,
 };
 
@@ -26,13 +26,13 @@ export const skills = [
     category: "Python Backend",
     icon: "Server",
     color: "#00FF88",
-    items: ["FastAPI", "Django", "Django REST Framework", "Django Channels", "WebSocket", "JWT Auth", "REST APIs"],
+    items: ["FastAPI", "Django", "Django REST Framework", "Django Channels", "WebSocket", "JWT Auth", "REST APIs","pydantic"],
   },
   {
     category: "Node.js Backend",
     icon: "Zap",
     color: "#FFD700",
-    items: ["Node.js", "Fastify", "Express.js", "TypeScript", "WebSocket", "JWT", "MVC Architecture"],
+    items: ["Node.js", "Fastify", "Express.js","Fastify", "TypeScript", "WebSocket", "JWT", "MVC Architecture"],
   },
   {
     category: "Frontend",
@@ -50,7 +50,7 @@ export const skills = [
     category: "Data & Analytics",
     icon: "BarChart",
     color: "#C77DFF",
-    items: ["Pandas", "NumPy", "Pydantic", "Data Analysis", "Data Cleaning"],
+    items: ["Pandas", "NumPy", "Data Analysis", "Data Cleaning","PowerBI","Superset"],
   },
   {
     category: "Tools & DevOps",
@@ -169,7 +169,7 @@ export const education = [
     institution: "K. J. Somaiya College, Kopargaon",
     period: "2022 – 2025",
     score: "CGPA: 7.30",
-    highlight: false,
+    highlight: true,
   },
   {
     degree: "Higher Secondary Certificate (Science)",
@@ -191,7 +191,7 @@ export const education = [
 
 export const certifications = [
   {
-    name: "Python (Basic)",
+    name: "Python",
     issuer: "HackerRank",
     id: "FC4F66072943",
     icon: "🐍",
@@ -199,7 +199,7 @@ export const certifications = [
     url: "https://www.hackerrank.com/certificates/FC4F66072943",
   },
   {
-    name: "SQL (Basic)",
+    name: "SQL",
     issuer: "HackerRank",
     id: "BA4D716573F5",
     icon: "🗃️",
@@ -232,7 +232,7 @@ export const freelanceServices = [
     price: "Starting ₹2,000",
     deliverables: ["FastAPI / Django REST APIs", "JWT authentication", "Database integration", "Postman docs + deployment"],
     color: "#00FF88",
-    whatsappMessage: "Hi Ishwar! 👋 I need Python backend development (FastAPI/Django). Can we discuss my project?",
+    whatsappMessage: "Hi Ishwar!  I need Python backend development (FastAPI/Django). Can we discuss my project?",
   },
   {
     icon: "🌐",
@@ -241,7 +241,7 @@ export const freelanceServices = [
     price: "Starting ₹5,000",
     deliverables: ["React frontend", "FastAPI / Django backend", "PostgreSQL / MySQL DB", "Docker + deployment"],
     color: "#00D4FF",
-    whatsappMessage: "Hi Ishwar! 👋 I need a Full Stack web app (Python + React). Can we discuss?",
+    whatsappMessage: "Hi Ishwar!  I need a Full Stack web app (Python + React). Can we discuss?",
   },
   {
     icon: "🔐",
@@ -250,7 +250,7 @@ export const freelanceServices = [
     price: "Starting ₹1,500",
     deliverables: ["JWT auth flow", "Multi-channel OTP (Twilio)", "Role-based access", "Password reset flow"],
     color: "#FFB347",
-    whatsappMessage: "Hi Ishwar! 👋 I need an authentication system (JWT/OTP). Can we discuss?",
+    whatsappMessage: "Hi Ishwar!  I need an authentication system (JWT/OTP). Can we discuss?",
   },
   {
     icon: "⚡",
@@ -259,7 +259,7 @@ export const freelanceServices = [
     price: "Starting ₹4,000",
     deliverables: ["React frontend", "Node.js / Express backend", "MongoDB integration", "REST API + JWT auth"],
     color: "#FF6B6B",
-    whatsappMessage: "Hi Ishwar! 👋 I need MERN stack development. Can we discuss my project?",
+    whatsappMessage: "Hi Ishwar!  I need MERN stack development. Can we discuss my project?",
   },
   {
     icon: "🏗️",
@@ -268,7 +268,7 @@ export const freelanceServices = [
     price: "Starting ₹1,500",
     deliverables: ["System architecture diagram", "DB schema design", "API contract design", "Scalability recommendations"],
     color: "#C77DFF",
-    whatsappMessage: "Hi Ishwar! 👋 I need help with system design / backend architecture. Can we discuss?",
+    whatsappMessage: "Hi Ishwar!  I need help with system design / backend architecture. Can we discuss?",
   },
   {
     icon: "📊",
@@ -277,7 +277,7 @@ export const freelanceServices = [
     price: "Starting ₹1,200",
     deliverables: ["Data cleaning & preprocessing", "Pandas / NumPy analysis", "Pydantic data validation", "Report / visualizations"],
     color: "#4ECDC4",
-    whatsappMessage: "Hi Ishwar! 👋 I need data analysis help using Python (Pandas/NumPy). Can we discuss?",
+    whatsappMessage: "Hi Ishwar!  I need data analysis help using Python (Pandas/NumPy). Can we discuss?",
   },
   {
     icon: "🗄️",
@@ -286,7 +286,7 @@ export const freelanceServices = [
     price: "Starting ₹1,000",
     deliverables: ["Schema / ER design", "Query optimization", "Redis caching setup", "Migration scripts"],
     color: "#FFD700",
-    whatsappMessage: "Hi Ishwar! 👋 I need database design and optimization. Can we discuss?",
+    whatsappMessage: "Hi Ishwar!  I need database design and optimization. Can we discuss?",
   },
   {
     icon: "🐳",
@@ -295,6 +295,6 @@ export const freelanceServices = [
     price: "Starting ₹800",
     deliverables: ["Dockerfile setup", "Docker Compose", "Environment config", "Deployment guide"],
     color: "#FF8C69",
-    whatsappMessage: "Hi Ishwar! 👋 I need Docker containerization and deployment help. Can we discuss?",
+    whatsappMessage: "Hi Ishwar!  I need Docker containerization and deployment help. Can we discuss?",
   },
 ];
