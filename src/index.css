@@ -1,0 +1,352 @@
+/*
+  DESIGN SYSTEM — Ishwar Lahire Portfolio
+  
+  Palette: Deep navy-slate base, warm off-white text, coral-orange accent,
+           electric teal secondary — engineering precision meets human warmth.
+  
+  Type: "Plus Jakarta Sans" (display) — geometric, modern, distinctive
+        "Lora" (accent headings) — serif contrast for name/hero only  
+        "Fira Code" (mono) — authentic dev terminal feel
+        "Manrope" (body) — clean, highly legible at small sizes
+  
+  Signature: The split-tone section — sections alternate between deep navy
+             and charcoal surfaces, with a warm coral underline on the name,
+             and a subtle scanline texture on code blocks.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,700;1,400;1,700&family=Fira+Code:wght@400;500&family=Manrope:wght@400;500;600&display=swap');
+
+/* ── COLOR TOKENS ─────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --bg:         #0B0F1A;
+  --bg-alt:     #0F1423;
+  --bg-card:    #131928;
+  --bg-raised:  #1A2035;
+  --border:     rgba(255,255,255,0.07);
+  --border-mid: rgba(255,255,255,0.12);
+  --border-hi:  rgba(255,107,53,0.4);
+
+  --text:       #F0EDE8;
+  --text-2:     #9AA3B5;
+  --text-3:     #4D5671;
+
+  /* Signature coral-orange accent */
+  --accent:     #FF6B35;
+  --accent-rgb: 255,107,53;
+  --accent-light: #FF8C5A;
+
+  /* Teal secondary */
+  --teal:       #2DD4BF;
+  --teal-rgb:   45,212,191;
+  --teal-light: #5EEAD4;
+
+  /* Purple tertiary */
+  --purple:     #818CF8;
+  --yellow:     #FCD34D;
+  --green:      #34D399;
+
+  --glow-accent: rgba(255,107,53,0.15);
+  --glow-teal:   rgba(45,212,191,0.12);
+  --nav-bg:      rgba(11,15,26,0.92);
+  --tag-bg:      rgba(255,255,255,0.04);
+}
+
+:root[data-theme="light"] {
+  --bg:         #F8F7F4;
+  --bg-alt:     #FFFFFF;
+  --bg-card:    #FFFFFF;
+  --bg-raised:  #F1EFE9;
+  --border:     rgba(0,0,0,0.08);
+  --border-mid: rgba(0,0,0,0.14);
+  --border-hi:  rgba(220,70,20,0.35);
+
+  --text:       #1A1612;
+  --text-2:     #5A5650;
+  --text-3:     #9E998F;
+
+  --accent:     #DC4614;
+  --accent-rgb: 220,70,20;
+  --accent-light: #E8622E;
+
+  --teal:       #0D9488;
+  --teal-rgb:   13,148,136;
+  --teal-light: #14B8A6;
+
+  --purple:     #4F46E5;
+  --yellow:     #D97706;
+  --green:      #059669;
+
+  --glow-accent: rgba(220,70,20,0.08);
+  --glow-teal:   rgba(13,148,136,0.08);
+  --nav-bg:      rgba(248,247,244,0.92);
+  --tag-bg:      rgba(0,0,0,0.04);
+}
+
+/* ── RESET ────────────────────────────────────────────────── */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background .3s, color .3s;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+/* ── TYPOGRAPHY ROLES ─────────────────────────────────────── */
+.font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+.font-serif   { font-family: 'Lora', serif; }
+.font-mono    { font-family: 'Fira Code', monospace; }
+.font-body    { font-family: 'Manrope', sans-serif; }
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* ── LAYOUT ───────────────────────────────────────────────── */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media(max-width:640px){ .container { padding: 0 1.25rem; } }
+
+/* ── CARDS ────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255,255,255,.025) 0%, transparent 55%);
+  pointer-events: none;
+}
+.card:hover {
+  border-color: rgba(var(--accent-rgb),.3);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.3), 0 0 0 1px rgba(var(--accent-rgb),.08);
+}
+
+/* ── BUTTONS ──────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .65rem 1.5rem;
+  background: var(--accent);
+  color: #FFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; font-size: .85rem; letter-spacing: .01em;
+  border: none; border-radius: 9px;
+  cursor: pointer; text-decoration: none;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px var(--glow-accent);
+  color: #FFF;
+}
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .65rem 1.5rem;
+  background: transparent;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600; font-size: .85rem;
+  border: 1px solid var(--border-mid);
+  border-radius: 9px;
+  cursor: pointer; text-decoration: none;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px var(--glow-accent);
+}
+
+.btn-teal {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .65rem 1.5rem;
+  background: transparent;
+  color: var(--teal);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600; font-size: .85rem;
+  border: 1px solid rgba(var(--teal-rgb),.35);
+  border-radius: 9px;
+  cursor: pointer; text-decoration: none;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn-teal:hover {
+  background: rgba(var(--teal-rgb),.08);
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+
+/* ── TAGS ─────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  padding: .2rem .65rem;
+  font-family: 'Fira Code', monospace;
+  font-size: .68rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  background: var(--tag-bg);
+  transition: all .18s;
+}
+.tag:hover {
+  border-color: rgba(var(--teal-rgb),.5);
+  color: var(--teal-light);
+  background: rgba(var(--teal-rgb),.07);
+}
+
+/* ── SECTION ANATOMY ──────────────────────────────────────── */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-family: 'Fira Code', monospace;
+  font-size: .7rem; font-weight: 500;
+  color: var(--accent);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+}
+.eyebrow::before {
+  content: '';
+  display: block; width: 20px; height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+.section-title {
+  font-size: clamp(1.85rem,4vw,2.75rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.section-sub {
+  color: var(--text-2);
+  font-size: .975rem;
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 3rem;
+}
+
+/* ── NAV ──────────────────────────────────────────────────── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: background .3s, box-shadow .3s;
+}
+
+/* ── FORM ─────────────────────────────────────────────────── */
+input, textarea {
+  width: 100%;
+  padding: .8rem 1.1rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-mid);
+  border-radius: 9px;
+  color: var(--text);
+  font-family: 'Manrope', sans-serif;
+  font-size: .9rem;
+  transition: all .2s; outline: none;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--glow-accent);
+}
+input::placeholder, textarea::placeholder { color: var(--text-3); }
+
+/* ── ANIMATIONS ───────────────────────────────────────────── */
+@keyframes float  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+@keyframes blink  { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes pulse  {
+  0%,100%{ box-shadow: 0 0 0 0 rgba(var(--teal-rgb),.5) }
+  60%    { box-shadow: 0 0 0 7px rgba(var(--teal-rgb),0) }
+}
+
+.cursor::after {
+  content: '▋';
+  font-size: .85em;
+  color: var(--teal);
+  animation: blink 1.1s step-end infinite;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--teal);
+  animation: pulse 2.2s ease infinite;
+}
+
+/* ── DIVIDER ──────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* ── CODE BLOCK ───────────────────────────────────────────── */
+.code-block {
+  background: #080D18;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+  font-size: .78rem;
+  line-height: 2;
+}
+.code-block .titlebar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .6rem 1rem;
+  background: rgba(255,255,255,.03);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.code-block .titlebar-dots { display: flex; gap: .38rem; }
+.code-block .titlebar-dots span {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+
+/* ── MISC ─────────────────────────────────────────────────── */
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+.grid-auto { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.25rem; }
+
+@media(max-width:768px){
+  .grid-2,.grid-3 { grid-template-columns:1fr !important; }
+}
+
+/* Accent text underline — signature element */
+.name-underline {
+  position: relative; display: inline-block;
+}
+.name-underline::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--teal) 100%);
+  border-radius: 2px;
+}
+
